@@ -1,0 +1,98 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  color: #12263a;
+  background: #f3f7fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.layout {
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+header h1 {
+  font-size: 1.35rem;
+  margin-bottom: 0.25rem;
+}
+
+.card {
+  background: white;
+  border-radius: 0.85rem;
+  padding: 1rem;
+  box-shadow: 0 4px 20px rgba(19, 38, 58, 0.08);
+}
+
+.item {
+  display: grid;
+  gap: 0.25rem;
+  border-top: 1px solid #e5edf5;
+  padding-top: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.primary {
+  border: none;
+  background: #0f67ff;
+  color: white;
+  padding: 0.65rem 0.9rem;
+  border-radius: 0.65rem;
+}
+
+.ghost {
+  border: 1px solid #c7d6ea;
+  background: white;
+  padding: 0.65rem 0.9rem;
+  border-radius: 0.65rem;
+}
+
+.live-actions,
+.chips {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.7rem;
+}
+
+.chip {
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  background: #e8f0ff;
+  font-size: 0.85rem;
+}
+
+.chat {
+  max-height: 120px;
+  overflow: auto;
+  background: #f8fbff;
+  padding: 0.6rem;
+  border-radius: 0.65rem;
+  margin-bottom: 0.6rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #c7d6ea;
+  border-radius: 0.6rem;
+}
+
+@media (min-width: 780px) {
+  .layout {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  header,
+  .card:first-of-type {
+    grid-column: span 2;
+  }
+}
